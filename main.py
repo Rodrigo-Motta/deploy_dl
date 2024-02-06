@@ -54,11 +54,6 @@ def predict(model, transform, image, class_labels):
   # Return the class name
   return str(class_name) + " - Confidence: " + str(class_prob) +  '%'
 
-# Load and display the image
-dog_image = Image.open(io.BytesIO(urlopen("https://unsplash.com/photos/I5yMF33r3s8/download?force=true&w=640").read()))
-
-# Classify the image
-print(predict(model, transform, dog_image, class_labels))
 
 index_template = """
 <html>
